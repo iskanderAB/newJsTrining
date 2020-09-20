@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+<button onclick="position()" id="ButtonClick">  click me !  </button>
+    <div class="div">
+      <div class="child"  id="child"> </div>
+    </div>
+
+<script>
+    const elementChild = document.getElementById('child') ;
+    function position() {
+        elementChild.style.margin = "auto" ;
+        elementChild.style.width = "20vw" ;
+        elementChild.style.height = "20vh";
+        elementChild.style.display = 'none' ;
+    }
+
+    setTimeout(()=>{
+        elementChild.style.marginLeft = "auto" ;
+    },2000);
+
+    setTimeout(function (){
+        elementChild.style.marginLeft = "0" ;
+        elementChild.style.marginRight = "auto" ;
+    },5000);
+
+</script>
+</body>
+</html>
